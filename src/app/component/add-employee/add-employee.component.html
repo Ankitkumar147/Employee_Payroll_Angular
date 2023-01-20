@@ -1,0 +1,96 @@
+<app-header></app-header>
+
+<div class="form-content">
+    <form action="#" class="form">
+        <div class="form-head">Employee Payroll Form</div>
+      
+    <!----------------Input Name------------>  
+        <div class="row-content">
+            <label class="label text" for="name">Name</label>
+            <mat-form-field  class="example-full-width" appearance="outline">
+                <mat-label>Full Name</mat-label>
+            <input matInput pattern="^[A-Z]{1}[a-z]{2,}$" minlength="3" type="name" class="name-input" matInput>
+        </mat-form-field>
+      </div>
+
+      <!----------------Profile Image------------> 
+      <div class="row-content">
+        <label class="label text" for="profile">Profile Image</label>
+        <div class="profile-radio-content">
+            <mat-radio-group>
+        <mat-radio-button  class=profile-width id="profile1" name="profile" color="primary" value="../assets/profile-images/Ellipse 1.png" required>
+            <img class="profile" id="image1" src="../assets/profile-images/Ellipse 1.png">
+        </mat-radio-button>
+        <mat-radio-button class=profile-width id="profile2" name="profile" color="primary" value="../assets/profile-images/Ellipse -2.png" required>
+            <img class="profile" id="image2" src="../assets/profile-images/Ellipse -2.png">
+        </mat-radio-button>
+        <mat-radio-button class=profile-width id="profile3" name="profile" color="primary" value="../assets/profile-images/Ellipse -3.png" required>
+            <img class="profile" id="image2" src="../assets/profile-images/Ellipse -3.png">
+        </mat-radio-button>
+        <mat-radio-button class=profile-width id="profile4" name="profile" color="primary" value="../assets/profile-images/Ellipse -4.png" required>
+            <img class="profile" id="image2" src="../assets/profile-images/Ellipse -4.png">
+        </mat-radio-button>
+    </mat-radio-group>
+  </div>
+</div>
+
+      <!----------------Gender------------> 
+<div class="row-content">
+    <label class="label text" for="gender">Gender</label>
+    <div>
+        <input type="radio" id="male" name="gender" value="Male" required>
+        <label class="text" for="male">Male</label>
+        <input type="radio" id="female" name="gender" value="Female" required>
+        <label class="text" for="female">Female</label>
+    </div>
+</div>
+<!----------------Department------------>
+<div class="row-content">
+    <label class="label-text" for="department">Department</label>
+<div>
+    <input type="checkbox" id="hr" name="department" value="HR">
+    <label class="text" for="hr">Hr</label>
+
+    <input type="checkbox" id="sales" name="department" value="SALES">
+    <label class="text" for="sales">Sales</label>
+    
+    <input type="checkbox" id="finance" name="department" value="FINANCE">
+    <label class="text" for="finance">Finance</label>
+    
+    <input type="checkbox" id="engineer" name="department" value="ENGINEER">
+    <label class="text" for="engineer">Engineer</label>
+    
+    <input type="checkbox" id="others" name="department" value="OTHERS">
+    <label class="text" for="others">Others</label>
+
+</div>
+</div>
+<!----------------Salary---------------->
+<div class="row-content">
+    <label class="label-text" for="salary">Choose Your Salary</label>
+    <input type="range" name="salary" id="salary" min="10000" max="500000" step="100" value="100000">
+    <output class="salary-output  text" for="salary">100000</output>
+</div>
+
+<div class="row-content">
+    <label class="label-text" for="salary">Choose Your Salary</label>
+    <ngx-slider [(value)]="value" [options]="options"></ngx-slider>
+</div>
+
+<!-- <div class="row-content">
+    <label class="label-text" for="salary">Salary</label>
+    <mat-form-field>
+        <mat-label> Select Salary</mat-label>
+        <mat-select [(ngModel)]="employee.salary">
+
+        </mat-select>
+    </mat-form-field> -->
+<!-- </div> -->
+
+
+<!----------------Start Date------------> 
+
+    </form>
+</div>
+
+<router-outlet> </router-outlet>
