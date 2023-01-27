@@ -8,9 +8,11 @@ import { MaterialModule } from './material/material.module';
 import { HomePageComponent } from './component/home-page/home-page.component';
 import { AddEmployeeComponent } from './component/add-employee/add-employee.component';
 import { HeaderComponent } from './component/header/header.component';
-import { FormsModule } from '@angular/forms';
-import {MatInputModule} from '@angular/material/input';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MatInputModule} from '@angular/material/input';
 import { NgxSliderModule } from '@angular-slider/ngx-slider';
+import { MatSliderModule } from '@angular/material/slider';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -19,6 +21,7 @@ import { NgxSliderModule } from '@angular-slider/ngx-slider';
     AddEmployeeComponent,
     HeaderComponent
   ],
+  
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -26,7 +29,11 @@ import { NgxSliderModule } from '@angular-slider/ngx-slider';
     MaterialModule,
     MatInputModule,
     FormsModule,
-    NgxSliderModule
+    NgxSliderModule,
+    MatSliderModule,
+    ReactiveFormsModule,
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
